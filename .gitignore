@@ -1,0 +1,23 @@
+# Credentials — never commit these
+.env
+.cache
+
+# Large data files — download/generate locally with collect_songs.py
+dataset.csv
+data_raw/
+songs_raw.csv
+songs_scaled.csv
+songs_clustered.csv
+
+# Model artifact — regenerate with recommender.py
+recommender.pkl
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.ipynb_checkpoints/
+
+# OS
+.DS_Store
+Thumbs.db
