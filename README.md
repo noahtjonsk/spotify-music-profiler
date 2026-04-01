@@ -10,11 +10,11 @@ An end-to-end data science project that clusters ~81,000 songs by audio profile 
 
 ## What it does
 
-1. **Data collection** — loads a Kaggle dataset of 114k Spotify tracks across 114 genres, deduplicates by track ID and by (track name, artist) → 81,344 unique tracks
-2. **EDA & preprocessing** — distribution plots, Pearson correlation heatmap, drops `acousticness` (r = −0.73 with `energy`), StandardScaler on 11 features (tempo and key kept in raw units)
-3. **Clustering** — K-Means sweep k=2..12 with silhouette + elbow selection, Ward hierarchical dendrogram for validation, final model at k=5
-4. **KNN recommender** — `NearestNeighbors` (Euclidean, ball-tree) fitted on the scaled feature matrix, wrapped in a `SongRecommender` class and serialised to `recommender.pkl`
-5. **Streamlit app** — live-filtered song search dropdown, results table, radar chart comparing the query song's audio profile to the result average
+1. **Data collection** - loads a Kaggle dataset of 114k Spotify tracks across 114 genres, deduplicates by track ID and by (track name, artist) → 81,344 unique tracks
+2. **EDA & preprocessing** - distribution plots, Pearson correlation heatmap, drops `acousticness` (r = −0.73 with `energy`), StandardScaler on 11 features (tempo and key kept in raw units)
+3. **Clustering** - K-Means sweep k=2..12 with silhouette + elbow selection, Ward hierarchical dendrogram for validation, final model at k=5
+4. **KNN recommender** - `NearestNeighbors` (Euclidean, ball-tree) fitted on the scaled feature matrix, wrapped in a `SongRecommender` class and serialised to `recommender.pkl`
+5. **Streamlit app** - live-filtered song search dropdown, results table, radar chart comparing the query song's audio profile to the result average
 
 ---
 
